@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A2BEABEF1C44E3E500ACF8FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEABEE1C44E3E500ACF8FF /* AppDelegate.swift */; };
 		A2BEABF11C44E3E500ACF8FF /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEABF01C44E3E500ACF8FF /* FavoritesController.swift */; };
 		A2BEABF31C44E3E500ACF8FF /* ActorsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEABF21C44E3E500ACF8FF /* ActorsController.swift */; };
 		A2BEABF61C44E3E500ACF8FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BEABF41C44E3E500ACF8FF /* Main.storyboard */; };
@@ -19,6 +18,8 @@
 		A2BEAC221C44E5D400ACF8FF /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEAC211C44E5D400ACF8FF /* DataController.swift */; };
 		A2BEAC251C44E66F00ACF8FF /* Actor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEAC231C44E66F00ACF8FF /* Actor+CoreDataProperties.swift */; };
 		A2BEAC261C44E66F00ACF8FF /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEAC241C44E66F00ACF8FF /* Actor.swift */; };
+		A2BEAC291C44ED2100ACF8FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEABEE1C44E3E500ACF8FF /* AppDelegate.swift */; };
+		A2BEAC2B1C44ED6C00ACF8FF /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A2BEAC2A1C44ED6C00ACF8FF /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		A2BEAC211C44E5D400ACF8FF /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		A2BEAC231C44E66F00ACF8FF /* Actor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Actor+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A2BEAC241C44E66F00ACF8FF /* Actor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
+		A2BEAC2A1C44ED6C00ACF8FF /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		A2BEABE21C44E3E500ACF8FF = {
 			isa = PBXGroup;
 			children = (
+				A2BEAC2A1C44ED6C00ACF8FF /* Settings.bundle */,
 				A2BEAC231C44E66F00ACF8FF /* Actor+CoreDataProperties.swift */,
 				A2BEAC241C44E66F00ACF8FF /* Actor.swift */,
 				A2BEABED1C44E3E500ACF8FF /* SimpleHomeControl */,
@@ -244,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2BEAC2B1C44ED6C00ACF8FF /* Settings.bundle in Resources */,
 				A2BEABFB1C44E3E500ACF8FF /* LaunchScreen.storyboard in Resources */,
 				A2BEABF81C44E3E500ACF8FF /* Assets.xcassets in Resources */,
 				A2BEABF61C44E3E500ACF8FF /* Main.storyboard in Resources */,
@@ -275,8 +279,8 @@
 				A2BEAC251C44E66F00ACF8FF /* Actor+CoreDataProperties.swift in Sources */,
 				A2BEABF31C44E3E500ACF8FF /* ActorsController.swift in Sources */,
 				A2BEAC261C44E66F00ACF8FF /* Actor.swift in Sources */,
+				A2BEAC291C44ED2100ACF8FF /* AppDelegate.swift in Sources */,
 				A2BEAC201C44E5BA00ACF8FF /* Storage.xcdatamodeld in Sources */,
-				A2BEABEF1C44E3E500ACF8FF /* AppDelegate.swift in Sources */,
 				A2BEABF11C44E3E500ACF8FF /* FavoritesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
