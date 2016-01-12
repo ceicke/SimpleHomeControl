@@ -6,7 +6,6 @@
 //  Copyright © 2016 Christoph Eicke. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import CoreData
 
@@ -15,7 +14,6 @@ class ActorDetailsController: UIViewController {
     var actor: Actor?
     var managedObjectContext: NSManagedObjectContext? = nil
 
-    
     @IBOutlet weak var onButton: UIButton!
     @IBOutlet weak var offButton: UIButton!
     @IBOutlet weak var dimmerSlider: UISlider!

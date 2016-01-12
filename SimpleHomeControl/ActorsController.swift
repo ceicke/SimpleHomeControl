@@ -74,15 +74,15 @@ class ActorsController: UITableViewController, NSFetchedResultsControllerDelegat
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return actors.count
+        return actors.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-            
-            let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! ActorCell
-            let actor = actors[indexPath.row]
-            cell.configure(actor.valueForKey("name")!.description)
-            return cell
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! ActorCell
+        let actor = actors[indexPath.row]
+        cell.configure(actor.valueForKey("name")!.description)
+        
+        return cell
     }
     
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

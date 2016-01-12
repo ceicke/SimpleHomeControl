@@ -21,6 +21,7 @@
 		A2BEAC2D1C44F29B00ACF8FF /* ActorsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEAC2C1C44F29B00ACF8FF /* ActorsController.swift */; };
 		A2BEAC2F1C45168D00ACF8FF /* ActorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEAC2E1C45168D00ACF8FF /* ActorCell.swift */; };
 		A2BEAC311C453CD300ACF8FF /* ActorDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEAC301C453CD300ACF8FF /* ActorDetailsController.swift */; };
+		A2BEAC331C454D9600ACF8FF /* ControlCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEAC321C454D9600ACF8FF /* ControlCellController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		A2BEAC2C1C44F29B00ACF8FF /* ActorsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorsController.swift; sourceTree = "<group>"; };
 		A2BEAC2E1C45168D00ACF8FF /* ActorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorCell.swift; sourceTree = "<group>"; };
 		A2BEAC301C453CD300ACF8FF /* ActorDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorDetailsController.swift; sourceTree = "<group>"; };
+		A2BEAC321C454D9600ACF8FF /* ControlCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlCellController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				A2BEAC2C1C44F29B00ACF8FF /* ActorsController.swift */,
 				A2BEAC2E1C45168D00ACF8FF /* ActorCell.swift */,
 				A2BEAC301C453CD300ACF8FF /* ActorDetailsController.swift */,
+				A2BEAC321C454D9600ACF8FF /* ControlCellController.swift */,
 			);
 			path = SimpleHomeControl;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				A2BEAC261C44E66F00ACF8FF /* Actor.swift in Sources */,
 				A2BEAC311C453CD300ACF8FF /* ActorDetailsController.swift in Sources */,
 				A2BEAC2F1C45168D00ACF8FF /* ActorCell.swift in Sources */,
+				A2BEAC331C454D9600ACF8FF /* ControlCellController.swift in Sources */,
 				A2BEAC291C44ED2100ACF8FF /* AppDelegate.swift in Sources */,
 				A2BEAC201C44E5BA00ACF8FF /* Storage.xcdatamodeld in Sources */,
 				A2BEABF11C44E3E500ACF8FF /* FavoritesController.swift in Sources */,
