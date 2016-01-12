@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  SimpleHomeControl
 //
 //  Created by Christoph Eicke on 12.01.16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class ActorsController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		A2BEABEF1C44E3E500ACF8FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEABEE1C44E3E500ACF8FF /* AppDelegate.swift */; };
-		A2BEABF11C44E3E500ACF8FF /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEABF01C44E3E500ACF8FF /* FirstViewController.swift */; };
-		A2BEABF31C44E3E500ACF8FF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEABF21C44E3E500ACF8FF /* SecondViewController.swift */; };
+		A2BEABF11C44E3E500ACF8FF /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEABF01C44E3E500ACF8FF /* FavoritesController.swift */; };
+		A2BEABF31C44E3E500ACF8FF /* ActorsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEABF21C44E3E500ACF8FF /* ActorsController.swift */; };
 		A2BEABF61C44E3E500ACF8FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BEABF41C44E3E500ACF8FF /* Main.storyboard */; };
 		A2BEABF81C44E3E500ACF8FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2BEABF71C44E3E500ACF8FF /* Assets.xcassets */; };
 		A2BEABFB1C44E3E500ACF8FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BEABF91C44E3E500ACF8FF /* LaunchScreen.storyboard */; };
 		A2BEAC061C44E3E500ACF8FF /* SimpleHomeControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEAC051C44E3E500ACF8FF /* SimpleHomeControlTests.swift */; };
 		A2BEAC111C44E3E500ACF8FF /* SimpleHomeControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEAC101C44E3E500ACF8FF /* SimpleHomeControlUITests.swift */; };
+		A2BEAC201C44E5BA00ACF8FF /* Storage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2BEAC1E1C44E5BA00ACF8FF /* Storage.xcdatamodeld */; };
+		A2BEAC221C44E5D400ACF8FF /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEAC211C44E5D400ACF8FF /* DataController.swift */; };
+		A2BEAC251C44E66F00ACF8FF /* Actor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEAC231C44E66F00ACF8FF /* Actor+CoreDataProperties.swift */; };
+		A2BEAC261C44E66F00ACF8FF /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEAC241C44E66F00ACF8FF /* Actor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +41,8 @@
 /* Begin PBXFileReference section */
 		A2BEABEB1C44E3E500ACF8FF /* SimpleHomeControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleHomeControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2BEABEE1C44E3E500ACF8FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A2BEABF01C44E3E500ACF8FF /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		A2BEABF21C44E3E500ACF8FF /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		A2BEABF01C44E3E500ACF8FF /* FavoritesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesController.swift; sourceTree = "<group>"; };
+		A2BEABF21C44E3E500ACF8FF /* ActorsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorsController.swift; sourceTree = "<group>"; };
 		A2BEABF51C44E3E500ACF8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A2BEABF71C44E3E500ACF8FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2BEABFA1C44E3E500ACF8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,10 @@
 		A2BEAC0C1C44E3E500ACF8FF /* SimpleHomeControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleHomeControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2BEAC101C44E3E500ACF8FF /* SimpleHomeControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleHomeControlUITests.swift; sourceTree = "<group>"; };
 		A2BEAC121C44E3E500ACF8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2BEAC1F1C44E5BA00ACF8FF /* Storage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Storage.xcdatamodel; sourceTree = "<group>"; };
+		A2BEAC211C44E5D400ACF8FF /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		A2BEAC231C44E66F00ACF8FF /* Actor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Actor+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A2BEAC241C44E66F00ACF8FF /* Actor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,8 @@
 		A2BEABE21C44E3E500ACF8FF = {
 			isa = PBXGroup;
 			children = (
+				A2BEAC231C44E66F00ACF8FF /* Actor+CoreDataProperties.swift */,
+				A2BEAC241C44E66F00ACF8FF /* Actor.swift */,
 				A2BEABED1C44E3E500ACF8FF /* SimpleHomeControl */,
 				A2BEAC041C44E3E500ACF8FF /* SimpleHomeControlTests */,
 				A2BEAC0F1C44E3E500ACF8FF /* SimpleHomeControlUITests */,
@@ -100,12 +110,14 @@
 			isa = PBXGroup;
 			children = (
 				A2BEABEE1C44E3E500ACF8FF /* AppDelegate.swift */,
-				A2BEABF01C44E3E500ACF8FF /* FirstViewController.swift */,
-				A2BEABF21C44E3E500ACF8FF /* SecondViewController.swift */,
+				A2BEAC1E1C44E5BA00ACF8FF /* Storage.xcdatamodeld */,
+				A2BEABF01C44E3E500ACF8FF /* FavoritesController.swift */,
+				A2BEABF21C44E3E500ACF8FF /* ActorsController.swift */,
 				A2BEABF41C44E3E500ACF8FF /* Main.storyboard */,
 				A2BEABF71C44E3E500ACF8FF /* Assets.xcassets */,
 				A2BEABF91C44E3E500ACF8FF /* LaunchScreen.storyboard */,
 				A2BEABFC1C44E3E500ACF8FF /* Info.plist */,
+				A2BEAC211C44E5D400ACF8FF /* DataController.swift */,
 			);
 			path = SimpleHomeControl;
 			sourceTree = "<group>";
@@ -259,9 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2BEABF31C44E3E500ACF8FF /* SecondViewController.swift in Sources */,
+				A2BEAC221C44E5D400ACF8FF /* DataController.swift in Sources */,
+				A2BEAC251C44E66F00ACF8FF /* Actor+CoreDataProperties.swift in Sources */,
+				A2BEABF31C44E3E500ACF8FF /* ActorsController.swift in Sources */,
+				A2BEAC261C44E66F00ACF8FF /* Actor.swift in Sources */,
+				A2BEAC201C44E5BA00ACF8FF /* Storage.xcdatamodeld in Sources */,
 				A2BEABEF1C44E3E500ACF8FF /* AppDelegate.swift in Sources */,
-				A2BEABF11C44E3E500ACF8FF /* FirstViewController.swift in Sources */,
+				A2BEABF11C44E3E500ACF8FF /* FavoritesController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +520,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A2BEAC1E1C44E5BA00ACF8FF /* Storage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A2BEAC1F1C44E5BA00ACF8FF /* Storage.xcdatamodel */,
+			);
+			currentVersion = A2BEAC1F1C44E5BA00ACF8FF /* Storage.xcdatamodel */;
+			path = Storage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A2BEABE31C44E3E500ACF8FF /* Project object */;
 }
