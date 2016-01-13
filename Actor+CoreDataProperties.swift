@@ -17,8 +17,8 @@ extension Actor {
     @NSManaged var name: String?
     @NSManaged var uuid: String?
     @NSManaged var room: String?
-    @NSManaged var dimmable: NSNumber?
-    @NSManaged var isScene: NSNumber?
+    @NSManaged var scene: String?
+    @NSManaged var isDimmable: NSNumber?
     @NSManaged var isFavorite: NSNumber?
 
 }

@@ -13,6 +13,7 @@ class ActorDetailsController: UIViewController {
     
     var actor: Actor?
     var managedObjectContext: NSManagedObjectContext? = nil
+    var loxone = Loxone()
 
     @IBOutlet weak var onButton: UIButton!
     @IBOutlet weak var offButton: UIButton!
@@ -21,6 +22,20 @@ class ActorDetailsController: UIViewController {
     
     @IBOutlet weak var roomLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBAction func offPressed(sender: AnyObject) {
+        loxone.tellLoxone(actor!.name!, uuid: actor!.uuid!, onOff: "off", scene: actor!.scene!)
+        dimmerSlider.value = 0
+    }
+    
+    @IBAction func onPressed(sender: AnyObject) {
+        loxone.tellLoxone(actor!.name!, uuid: actor!.uuid!, onOff: "on", scene: actor!.scene!)
+        dimmerSlider.value = 100
+    }
+    
+    @IBAction func dimmValueChanged(dimmer: UISlider) {
+        loxone.tellLoxone(actor!.name!, uuid: actor!.uuid!, onOff: "on", scene: "", dimmValue: Int(dimmer.value))
+    }
     
     @IBAction func isFavoriteChanged(sender: UISwitch) {
         actor?.setValue(sender.on, forKey: "isFavorite")
@@ -44,15 +59,16 @@ class ActorDetailsController: UIViewController {
         if let room = actor!.room {
             roomLabel.text = room
         }
-        if let dimmable = actor!.dimmable {
+        if let dimmable = actor!.isDimmable {
             dimmerSlider.hidden = !Bool(dimmable)
-        }
-        if let isScene = actor!.isScene {
-            dimmerSlider.hidden = Bool(isScene)
-            offButton.hidden = Bool(isScene)
         }
         if let isFavorite = actor!.isFavorite {
             favoriteSwitch.setOn(Bool(isFavorite), animated: true)
+        }
+        if let scene = actor!.scene {
+            if scene != "" {
+                offButton.hidden = true
+            }
         }
     }
     

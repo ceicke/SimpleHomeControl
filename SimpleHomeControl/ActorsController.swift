@@ -12,6 +12,7 @@ import CoreData
 class ActorsController: UITableViewController, NSFetchedResultsControllerDelegate {
     
     var actors = [NSManagedObject]()
+    var loxone = Loxone()
     
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var managedContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
@@ -20,8 +21,17 @@ class ActorsController: UITableViewController, NSFetchedResultsControllerDelegat
         managedContext = appDelegate.managedObjectContext
         
         let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: Selector("seedData"), forControlEvents: UIControlEvents.ValueChanged)
+        if(loxone.settingsEntered()) {
+            refreshControl.addTarget(self, action: Selector("seedData"), forControlEvents: UIControlEvents.ValueChanged)
+        } else {
+            refreshControl.addTarget(self, action: Selector("enterData"), forControlEvents: UIControlEvents.ValueChanged)
+        }
         self.refreshControl = refreshControl
+    }
+    
+    func enterData() {
+        UIApplication.sharedApplication().openURL(NSURL(string:UIApplicationOpenSettingsURLString)!)
+        refreshControl!.endRefreshing()
     }
     
     func seedData() {
@@ -32,8 +42,8 @@ class ActorsController: UITableViewController, NSFetchedResultsControllerDelegat
         actor.setValue("Deckenleuchte", forKey: "name")
         actor.setValue("Schlafzimmer", forKey: "room")
         actor.setValue("8283429384", forKey: "uuid")
-        actor.setValue(0, forKey: "dimmable")
-        actor.setValue(0, forKey: "isScene")
+        actor.setValue("", forKey: "scene")
+        actor.setValue(1, forKey: "isDimmable")
         actor.setValue(0, forKey: "isFavorite")
         
         do {

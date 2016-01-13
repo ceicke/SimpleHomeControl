@@ -13,6 +13,8 @@ class ControlCellController: UICollectionViewCell {
     
     var actor: Actor?
     
+    var loxone = Loxone()
+    
     @IBOutlet weak var roomLabel: UILabel!
     @IBOutlet weak var actorNameLabel: UILabel!
     @IBOutlet weak var offButton: UIButton!
@@ -20,15 +22,17 @@ class ControlCellController: UICollectionViewCell {
     @IBOutlet weak var dimmerSlider: UISlider!
     
     @IBAction func offPressed(sender: AnyObject) {
-        print("off")
+        loxone.tellLoxone(actor!.name!, uuid: actor!.uuid!, onOff: "off", scene: actor!.scene!)
+        dimmerSlider.value = 0
     }
     
     @IBAction func onPressed(sender: AnyObject) {
-        print("on")
+        loxone.tellLoxone(actor!.name!, uuid: actor!.uuid!, onOff: "on", scene: actor!.scene!)
+        dimmerSlider.value = 100
     }
     
-    @IBAction func dimmValueChanged(sender: UISlider) {
-        print("slide")
+    @IBAction func dimmValueChanged(dimmer: UISlider) {
+        loxone.tellLoxone(actor!.name!, uuid: actor!.uuid!, onOff: "on", scene: "", dimmValue: Int(dimmer.value))
     }
     
     func configureView() {
@@ -38,12 +42,13 @@ class ControlCellController: UICollectionViewCell {
         if let room = actor!.room {
             roomLabel.text = room
         }
-        if let dimmable = actor!.dimmable {
+        if let dimmable = actor!.isDimmable {
             dimmerSlider.hidden = !Bool(dimmable)
         }
-        if let isScene = actor!.isScene {
-            dimmerSlider.hidden = Bool(isScene)
-            offButton.hidden = Bool(isScene)
+        if let scene = actor!.scene {
+            if scene != "" {
+                offButton.hidden = true
+            }
         }
     }
     
