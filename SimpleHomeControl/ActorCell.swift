@@ -11,8 +11,10 @@ import UIKit
 class ActorCell: UITableViewCell {
     
     @IBOutlet weak var actorName: UILabel!
+    @IBOutlet weak var roomName: UILabel!
     
-    func configure(name: String?) {
-        actorName.text = name
+    func configure(actor: String?, room: String?) {
+        actorName.text = actor
+        roomName.text = room
     }
 }

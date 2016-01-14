@@ -57,7 +57,7 @@ class FavoritesController: UICollectionViewController, NSFetchedResultsControlle
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("controlCell", forIndexPath: indexPath) as! ControlCellController
         cell.actor = actors[indexPath.row] as? Actor
-        cell.configureView()
+        cell.configureView(managedContext)
         return cell
     }
 

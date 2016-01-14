@@ -34,29 +34,6 @@ class ActorsController: UITableViewController, NSFetchedResultsControllerDelegat
         UIApplication.sharedApplication().openURL(NSURL(string:UIApplicationOpenSettingsURLString)!)
         refreshControl!.endRefreshing()
     }
-
-//    func seedData() {
-//        
-//        let entity =  NSEntityDescription.entityForName("Actor", inManagedObjectContext:managedContext)
-//        let actor = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
-//        
-//        actor.setValue("Deckenleuchte", forKey: "name")
-//        actor.setValue("Schlafzimmer", forKey: "room_uuid")
-//        actor.setValue("8283429384", forKey: "uuid")
-//        actor.setValue("", forKey: "scene")
-//        actor.setValue(1, forKey: "isDimmable")
-//        actor.setValue(0, forKey: "isFavorite")
-//        
-//        do {
-//            try managedContext.save()
-//            actors.append(actor)
-//        } catch let error as NSError  {
-//            NSLog("Could not save \(error), \(error.userInfo)")
-//        }
-//        
-//        self.tableView.reloadData()
-//        refreshControl!.endRefreshing()
-//    }
     
     func loadData() {
         loxone.getRooms { (isDone) -> Void in
@@ -91,7 +68,7 @@ class ActorsController: UITableViewController, NSFetchedResultsControllerDelegat
         super.viewWillAppear(animated)
         
         let fetchRequest = NSFetchRequest(entityName: "Actor")
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "room_uuid", ascending: true), NSSortDescriptor(key: "name", ascending: true)]
         
         do {
             let results =
@@ -110,7 +87,7 @@ class ActorsController: UITableViewController, NSFetchedResultsControllerDelegat
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! ActorCell
         let actor = actors[indexPath.row]
-        cell.configure(actor.valueForKey("name")!.description)
+        cell.configure(actor.valueForKey("name")!.description, room: loxone.getRoomByUuid(actor.valueForKey("room_uuid")!.description))
         
         return cell
     }

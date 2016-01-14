@@ -73,7 +73,6 @@ class Loxone {
     }
     
     func getRooms(callback: ((isDone: Bool)->Void)?) {
-        print("getting rooms")
         let loxoneLocalIP:NSString = NSUserDefaults.standardUserDefaults().valueForKey("server_ip") as! NSString
         let username:NSString = NSUserDefaults.standardUserDefaults().valueForKey("username") as! NSString
         let password:NSString = NSUserDefaults.standardUserDefaults().valueForKey("password") as! NSString
@@ -102,7 +101,6 @@ class Loxone {
     }
     
     func insertRoom(uuid: String, name: String) {
-        print("inserting room: \(name)")
         if !recordExists(uuid, recordType: "Rooms") {
             let entity =  NSEntityDescription.entityForName("Rooms", inManagedObjectContext:managedContext)
             let room = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
@@ -119,7 +117,6 @@ class Loxone {
     }
     
     func getControls(callback: ((isDone: Bool)->Void)?) {
-        print("getting controls")
         let loxoneLocalIP:NSString = NSUserDefaults.standardUserDefaults().valueForKey("server_ip") as! NSString
         let username:NSString = NSUserDefaults.standardUserDefaults().valueForKey("username") as! NSString
         let password:NSString = NSUserDefaults.standardUserDefaults().valueForKey("password") as! NSString
@@ -146,7 +143,6 @@ class Loxone {
                             self.insertActor(subJson["uuidAction"].string!, name: subJson["name"].string!, room_uuid: subJson["room"].string!, dimmable: true)
                         }
                         if subJson["type"].string == "LightController" {
-                            print("light controller found")
                             for (_, subSubJson):(String, JSON) in subJson["subControls"] {
                                 if subSubJson["type"].string == "Switch" {
                                     self.insertActor(subSubJson["uuidAction"].string!, name: subSubJson["name"].string!, room_uuid: subJson["room"].string!, dimmable: false)
@@ -165,7 +161,6 @@ class Loxone {
     }
     
     func insertActor(uuid: String, name: String, room_uuid: String, dimmable: Bool) {
-        print("inserting actor: \(name)")
         if !recordExists(uuid, recordType: "Actor") {
             let entity =  NSEntityDescription.entityForName("Actor", inManagedObjectContext:managedContext)
             let actor = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
@@ -209,7 +204,8 @@ class Loxone {
         
         do {
             let results = try managedContext.executeFetchRequest(fetchRequest)
-            return "Büro"
+            let room = results[0] as! NSManagedObject
+            return room.valueForKey("name") as! String
         } catch let error as NSError {
             NSLog("Could not fetch \(error), \(error.userInfo)")
             return ""

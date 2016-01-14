@@ -53,6 +53,7 @@ class ActorDetailsController: UIViewController {
     }
     
     func configureView() {
+        loxone.managedContext = self.managedObjectContext!
         if let name = actor!.name {
             nameLabel.text = name
         }

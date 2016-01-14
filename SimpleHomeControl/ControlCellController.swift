@@ -35,7 +35,8 @@ class ControlCellController: UICollectionViewCell {
         loxone.tellLoxone(actor!.name!, uuid: actor!.uuid!, onOff: "on", scene: "", dimmValue: Int(dimmer.value))
     }
     
-    func configureView() {
+    func configureView(managedContext: NSManagedObjectContext) {
+        loxone.managedContext = managedContext
         if let name = actor!.name {
             actorNameLabel.text = name
         }
