@@ -1,5 +1,5 @@
 //
-//  Actor+CoreDataProperties.swift
+//  Rooms+CoreDataProperties.swift
 //  SimpleHomeControl
 //
 //  Created by Christoph Eicke on 14.01.16.
@@ -12,13 +12,9 @@
 import Foundation
 import CoreData
 
-extension Actor {
+extension Rooms {
 
-    @NSManaged var isDimmable: NSNumber?
-    @NSManaged var isFavorite: NSNumber?
     @NSManaged var name: String?
-    @NSManaged var room_uuid: String?
-    @NSManaged var scene: String?
     @NSManaged var uuid: String?
 
 }

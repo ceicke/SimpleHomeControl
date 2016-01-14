@@ -4,11 +4,16 @@
         <attribute name="isDimmable" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="isFavorite" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="room" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="room_uuid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="scene" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Rooms" representedClassName=".Rooms" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Actor" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="Actor" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="Rooms" positionX="-342" positionY="-0" width="128" height="75"/>
     </elements>
 </model>

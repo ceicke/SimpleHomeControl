@@ -1,5 +1,5 @@
 //
-//  Actor.swift
+//  Rooms.swift
 //  SimpleHomeControl
 //
 //  Created by Christoph Eicke on 14.01.16.
@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 
-class Actor: NSManagedObject {
+class Rooms: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
 

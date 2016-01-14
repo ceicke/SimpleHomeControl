@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5DCE556B45B8226DB3A64018 /* Pods_SimpleHomeControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B55101F53DE46755B8B29C7 /* Pods_SimpleHomeControl.framework */; };
 		A211A7161C46A7D500398B8E /* Loxone.swift in Sources */ = {isa = PBXBuildFile; fileRef = A211A7151C46A7D500398B8E /* Loxone.swift */; };
+		A290D1181C47A2E4007340C1 /* Rooms+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A290D1161C47A2E4007340C1 /* Rooms+CoreDataProperties.swift */; };
+		A290D1191C47A2E4007340C1 /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = A290D1171C47A2E4007340C1 /* Rooms.swift */; };
+		A290D11C1C47B630007340C1 /* Actor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A290D11A1C47B630007340C1 /* Actor+CoreDataProperties.swift */; };
+		A290D11D1C47B630007340C1 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A290D11B1C47B630007340C1 /* Actor.swift */; };
 		A2BEABF11C44E3E500ACF8FF /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEABF01C44E3E500ACF8FF /* FavoritesController.swift */; };
 		A2BEABF61C44E3E500ACF8FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2BEABF41C44E3E500ACF8FF /* Main.storyboard */; };
 		A2BEABF81C44E3E500ACF8FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2BEABF71C44E3E500ACF8FF /* Assets.xcassets */; };
@@ -15,8 +20,6 @@
 		A2BEAC061C44E3E500ACF8FF /* SimpleHomeControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEAC051C44E3E500ACF8FF /* SimpleHomeControlTests.swift */; };
 		A2BEAC111C44E3E500ACF8FF /* SimpleHomeControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEAC101C44E3E500ACF8FF /* SimpleHomeControlUITests.swift */; };
 		A2BEAC201C44E5BA00ACF8FF /* Storage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2BEAC1E1C44E5BA00ACF8FF /* Storage.xcdatamodeld */; };
-		A2BEAC251C44E66F00ACF8FF /* Actor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEAC231C44E66F00ACF8FF /* Actor+CoreDataProperties.swift */; };
-		A2BEAC261C44E66F00ACF8FF /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEAC241C44E66F00ACF8FF /* Actor.swift */; };
 		A2BEAC291C44ED2100ACF8FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEABEE1C44E3E500ACF8FF /* AppDelegate.swift */; };
 		A2BEAC2B1C44ED6C00ACF8FF /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A2BEAC2A1C44ED6C00ACF8FF /* Settings.bundle */; };
 		A2BEAC2D1C44F29B00ACF8FF /* ActorsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BEAC2C1C44F29B00ACF8FF /* ActorsController.swift */; };
@@ -43,7 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C56A5AC0C721A5061669CA1 /* Pods-SimpleHomeControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleHomeControl.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleHomeControl/Pods-SimpleHomeControl.release.xcconfig"; sourceTree = "<group>"; };
+		3B55101F53DE46755B8B29C7 /* Pods_SimpleHomeControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleHomeControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A211A7151C46A7D500398B8E /* Loxone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loxone.swift; sourceTree = "<group>"; };
+		A290D1161C47A2E4007340C1 /* Rooms+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Rooms+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A290D1171C47A2E4007340C1 /* Rooms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
+		A290D11A1C47B630007340C1 /* Actor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Actor+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A290D11B1C47B630007340C1 /* Actor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
 		A2BEABEB1C44E3E500ACF8FF /* SimpleHomeControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleHomeControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2BEABEE1C44E3E500ACF8FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2BEABF01C44E3E500ACF8FF /* FavoritesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesController.swift; sourceTree = "<group>"; };
@@ -58,13 +67,12 @@
 		A2BEAC101C44E3E500ACF8FF /* SimpleHomeControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleHomeControlUITests.swift; sourceTree = "<group>"; };
 		A2BEAC121C44E3E500ACF8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2BEAC1F1C44E5BA00ACF8FF /* Storage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Storage.xcdatamodel; sourceTree = "<group>"; };
-		A2BEAC231C44E66F00ACF8FF /* Actor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Actor+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		A2BEAC241C44E66F00ACF8FF /* Actor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
 		A2BEAC2A1C44ED6C00ACF8FF /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		A2BEAC2C1C44F29B00ACF8FF /* ActorsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorsController.swift; sourceTree = "<group>"; };
 		A2BEAC2E1C45168D00ACF8FF /* ActorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorCell.swift; sourceTree = "<group>"; };
 		A2BEAC301C453CD300ACF8FF /* ActorDetailsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActorDetailsController.swift; sourceTree = "<group>"; };
 		A2BEAC321C454D9600ACF8FF /* ControlCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlCellController.swift; sourceTree = "<group>"; };
+		CB59A78324BA2AF24FB71E87 /* Pods-SimpleHomeControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleHomeControl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleHomeControl/Pods-SimpleHomeControl.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DCE556B45B8226DB3A64018 /* Pods_SimpleHomeControl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,16 +101,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F5C18E74936CB0EB951F6A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB59A78324BA2AF24FB71E87 /* Pods-SimpleHomeControl.debug.xcconfig */,
+				0C56A5AC0C721A5061669CA1 /* Pods-SimpleHomeControl.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9D16332554B692EB687056BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B55101F53DE46755B8B29C7 /* Pods_SimpleHomeControl.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A2BEABE21C44E3E500ACF8FF = {
 			isa = PBXGroup;
 			children = (
+				A290D11A1C47B630007340C1 /* Actor+CoreDataProperties.swift */,
+				A290D11B1C47B630007340C1 /* Actor.swift */,
+				A290D1161C47A2E4007340C1 /* Rooms+CoreDataProperties.swift */,
+				A290D1171C47A2E4007340C1 /* Rooms.swift */,
 				A2BEAC2A1C44ED6C00ACF8FF /* Settings.bundle */,
-				A2BEAC231C44E66F00ACF8FF /* Actor+CoreDataProperties.swift */,
-				A2BEAC241C44E66F00ACF8FF /* Actor.swift */,
 				A2BEABED1C44E3E500ACF8FF /* SimpleHomeControl */,
 				A2BEAC041C44E3E500ACF8FF /* SimpleHomeControlTests */,
 				A2BEAC0F1C44E3E500ACF8FF /* SimpleHomeControlUITests */,
 				A2BEABEC1C44E3E500ACF8FF /* Products */,
+				0F5C18E74936CB0EB951F6A7 /* Pods */,
+				9D16332554B692EB687056BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,9 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2BEAC151C44E3E500ACF8FF /* Build configuration list for PBXNativeTarget "SimpleHomeControl" */;
 			buildPhases = (
+				0B5A1B3789899C7CFC798C43 /* Check Pods Manifest.lock */,
 				A2BEABE71C44E3E500ACF8FF /* Sources */,
 				A2BEABE81C44E3E500ACF8FF /* Frameworks */,
 				A2BEABE91C44E3E500ACF8FF /* Resources */,
+				18F435A556633651D74898D8 /* Embed Pods Frameworks */,
+				3594FAE008103A5202165719 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -279,17 +312,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B5A1B3789899C7CFC798C43 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		18F435A556633651D74898D8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleHomeControl/Pods-SimpleHomeControl-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3594FAE008103A5202165719 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleHomeControl/Pods-SimpleHomeControl-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A2BEABE71C44E3E500ACF8FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2BEAC251C44E66F00ACF8FF /* Actor+CoreDataProperties.swift in Sources */,
-				A2BEAC261C44E66F00ACF8FF /* Actor.swift in Sources */,
+				A290D1191C47A2E4007340C1 /* Rooms.swift in Sources */,
 				A2BEAC311C453CD300ACF8FF /* ActorDetailsController.swift in Sources */,
 				A2BEAC2F1C45168D00ACF8FF /* ActorCell.swift in Sources */,
+				A290D11D1C47B630007340C1 /* Actor.swift in Sources */,
 				A2BEAC331C454D9600ACF8FF /* ControlCellController.swift in Sources */,
 				A2BEAC291C44ED2100ACF8FF /* AppDelegate.swift in Sources */,
+				A290D11C1C47B630007340C1 /* Actor+CoreDataProperties.swift in Sources */,
+				A290D1181C47A2E4007340C1 /* Rooms+CoreDataProperties.swift in Sources */,
 				A2BEAC201C44E5BA00ACF8FF /* Storage.xcdatamodeld in Sources */,
 				A2BEABF11C44E3E500ACF8FF /* FavoritesController.swift in Sources */,
 				A211A7161C46A7D500398B8E /* Loxone.swift in Sources */,
@@ -431,6 +514,7 @@
 		};
 		A2BEAC161C44E3E500ACF8FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB59A78324BA2AF24FB71E87 /* Pods-SimpleHomeControl.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SimpleHomeControl/Info.plist;
@@ -442,6 +526,7 @@
 		};
 		A2BEAC171C44E3E500ACF8FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C56A5AC0C721A5061669CA1 /* Pods-SimpleHomeControl.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SimpleHomeControl/Info.plist;

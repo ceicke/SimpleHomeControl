@@ -56,8 +56,8 @@ class ActorDetailsController: UIViewController {
         if let name = actor!.name {
             nameLabel.text = name
         }
-        if let room = actor!.room {
-            roomLabel.text = room
+        if let room_uuid = actor!.room_uuid {
+            roomLabel.text = loxone.getRoomByUuid(room_uuid)
         }
         if let dimmable = actor!.isDimmable {
             dimmerSlider.hidden = !Bool(dimmable)

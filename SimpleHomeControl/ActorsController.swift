@@ -19,10 +19,11 @@ class ActorsController: UITableViewController, NSFetchedResultsControllerDelegat
     
     override func viewDidLoad() {
         managedContext = appDelegate.managedObjectContext
+        loxone.managedContext = appDelegate.managedObjectContext
         
         let refreshControl = UIRefreshControl()
         if(loxone.settingsEntered()) {
-            refreshControl.addTarget(self, action: Selector("seedData"), forControlEvents: UIControlEvents.ValueChanged)
+            refreshControl.addTarget(self, action: Selector("loadData"), forControlEvents: UIControlEvents.ValueChanged)
         } else {
             refreshControl.addTarget(self, action: Selector("enterData"), forControlEvents: UIControlEvents.ValueChanged)
         }
@@ -33,28 +34,47 @@ class ActorsController: UITableViewController, NSFetchedResultsControllerDelegat
         UIApplication.sharedApplication().openURL(NSURL(string:UIApplicationOpenSettingsURLString)!)
         refreshControl!.endRefreshing()
     }
+
+//    func seedData() {
+//        
+//        let entity =  NSEntityDescription.entityForName("Actor", inManagedObjectContext:managedContext)
+//        let actor = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
+//        
+//        actor.setValue("Deckenleuchte", forKey: "name")
+//        actor.setValue("Schlafzimmer", forKey: "room_uuid")
+//        actor.setValue("8283429384", forKey: "uuid")
+//        actor.setValue("", forKey: "scene")
+//        actor.setValue(1, forKey: "isDimmable")
+//        actor.setValue(0, forKey: "isFavorite")
+//        
+//        do {
+//            try managedContext.save()
+//            actors.append(actor)
+//        } catch let error as NSError  {
+//            NSLog("Could not save \(error), \(error.userInfo)")
+//        }
+//        
+//        self.tableView.reloadData()
+//        refreshControl!.endRefreshing()
+//    }
     
-    func seedData() {
-        
-        let entity =  NSEntityDescription.entityForName("Actor", inManagedObjectContext:managedContext)
-        let actor = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
-        
-        actor.setValue("Deckenleuchte", forKey: "name")
-        actor.setValue("Schlafzimmer", forKey: "room")
-        actor.setValue("8283429384", forKey: "uuid")
-        actor.setValue("", forKey: "scene")
-        actor.setValue(1, forKey: "isDimmable")
-        actor.setValue(0, forKey: "isFavorite")
-        
-        do {
-            try managedContext.save()
-            actors.append(actor)
-        } catch let error as NSError  {
-            NSLog("Could not save \(error), \(error.userInfo)")
+    func loadData() {
+        loxone.getRooms { (isDone) -> Void in
+            if (isDone) {
+                self.loxone.getControls { (isDone) -> Void in
+                    if (isDone) {
+                        self.tableView.reloadData()
+                        self.refreshControl!.endRefreshing()
+                    } else {
+                        self.refreshControl!.endRefreshing()
+                        print("error")
+                    }
+                }
+            } else {
+                self.refreshControl!.endRefreshing()
+                print("error")
+            }
         }
-        
-        self.tableView.reloadData()
-        refreshControl!.endRefreshing()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
