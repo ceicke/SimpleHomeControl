@@ -144,6 +144,7 @@ class Loxone {
                         }
                         if subJson["type"].string == "LightController" {
                             for (_, subSubJson):(String, JSON) in subJson["subControls"] {
+                                // TODO: refactor because code is same as above
                                 if subSubJson["type"].string == "Switch" {
                                     self.insertActor(subSubJson["uuidAction"].string!, name: subSubJson["name"].string!, room_uuid: subJson["room"].string!, dimmable: false)
                                 }
