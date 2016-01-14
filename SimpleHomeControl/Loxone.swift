@@ -123,7 +123,7 @@ class Loxone {
         
         var configEndpoint = "http://\(username):\(password)@\(loxoneLocalIP)/data/loxapp3.json"
         
-        configEndpoint = "http://81.169.247.199/data/loxapp3.json"
+        // configEndpoint = "http://81.169.247.199/data/loxapp3.json"
         
         Alamofire.request(.GET, configEndpoint)
             .responseJSON { response in
