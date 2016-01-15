@@ -50,7 +50,13 @@
                             <outlet property="delegate" destination="TOi-Nc-aA1" id="jbl-Il-SO9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Actors" id="5kU-EI-E6k"/>
+                    <navigationItem key="navigationItem" title="Actors" id="5kU-EI-E6k">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="FyY-bf-0MT">
+                            <connections>
+                                <action selector="editPressed:" destination="TOi-Nc-aA1" id="EOT-Bv-LZb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="qNA-4G-50i">
                         <autoresizingMask key="autoresizingMask"/>
                         <attributedString key="attributedTitle">
@@ -62,6 +68,9 @@
                             </fragment>
                         </attributedString>
                     </refreshControl>
+                    <connections>
+                        <outlet property="editActorButton" destination="FyY-bf-0MT" id="erf-TG-aJ1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mw6-ph-Uol" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

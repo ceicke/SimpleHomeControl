@@ -16,8 +16,17 @@ class ActorsController: UITableViewController, NSFetchedResultsControllerDelegat
     
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var managedContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
+
     
-//    let refreshControl = UIRefreshControl()
+    @IBOutlet weak var editActorButton: UIBarButtonItem!
+
+    @IBAction func editPressed(sender: AnyObject) {
+        if self.tableView.editing {
+            self.tableView.setEditing(false, animated: true)
+        } else {
+            self.tableView.setEditing(true, animated: false)
+        }
+    }
     
     override func viewDidLoad() {
         managedContext = appDelegate.managedObjectContext
@@ -108,6 +117,28 @@ class ActorsController: UITableViewController, NSFetchedResultsControllerDelegat
     
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
+    }
+    
+    // called when a row deletion action is confirmed
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+            switch editingStyle {
+            case .Delete:
+                
+                managedContext.deleteObject(self.actors[indexPath.row])
+                
+                do {
+                    try managedContext.save()
+                } catch let error as NSError {
+                    NSLog("Could not save the actor. Error: \(error)")
+                }
+                
+                self.actors.removeAtIndex(indexPath.row)
+                self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+                self.tableView.reloadData()
+                
+            default:
+                return
+            }
     }
     
 
