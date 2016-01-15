@@ -112,7 +112,7 @@
                                     <constraint firstAttribute="height" constant="30" id="kNi-dQ-cyK"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="dimmValueChanged:" destination="EWH-3j-IKi" eventType="valueChanged" id="hns-ro-4Zc"/>
+                                    <action selector="dimmerValueChanged:" destination="EWH-3j-IKi" eventType="valueChanged" id="7Mc-bO-vnf"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show in Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ZL-ym-7I5">

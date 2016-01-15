@@ -24,16 +24,16 @@ class ActorDetailsController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     
     @IBAction func offPressed(sender: AnyObject) {
-        loxone.tellLoxone(actor!.name!, uuid: actor!.uuid!, onOff: "off", scene: actor!.scene!)
+        loxone.tellLoxone(actor!.name!, uuid: actor!.uuid!, onOff: "off", scene: "")
         dimmerSlider.value = 0
     }
     
     @IBAction func onPressed(sender: AnyObject) {
-        loxone.tellLoxone(actor!.name!, uuid: actor!.uuid!, onOff: "on", scene: actor!.scene!)
+        loxone.tellLoxone(actor!.name!, uuid: actor!.uuid!, onOff: "on", scene: "")
         dimmerSlider.value = 100
     }
     
-    @IBAction func dimmValueChanged(dimmer: UISlider) {
+    @IBAction func dimmerValueChanged(dimmer: UISlider) {
         loxone.tellLoxone(actor!.name!, uuid: actor!.uuid!, onOff: "on", scene: "", dimmValue: Int(dimmer.value))
     }
     

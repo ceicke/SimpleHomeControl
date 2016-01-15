@@ -22,12 +22,12 @@ class ControlCellController: UICollectionViewCell {
     @IBOutlet weak var dimmerSlider: UISlider!
     
     @IBAction func offPressed(sender: AnyObject) {
-        loxone.tellLoxone(actor!.name!, uuid: actor!.uuid!, onOff: "off", scene: actor!.scene!)
+        loxone.tellLoxone(actor!.name!, uuid: actor!.uuid!, onOff: "off", scene: "")
         dimmerSlider.value = 0
     }
     
     @IBAction func onPressed(sender: AnyObject) {
-        loxone.tellLoxone(actor!.name!, uuid: actor!.uuid!, onOff: "on", scene: actor!.scene!)
+        loxone.tellLoxone(actor!.name!, uuid: actor!.uuid!, onOff: "on", scene: "")
         dimmerSlider.value = 100
     }
     
