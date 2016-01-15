@@ -7,12 +7,11 @@
 //
 
 // TODO1:
-// - when coming back from settings, check if settings are there
-// - when getting new actors, show them in the list
 // - edit window for existing actors
 // - adding new actors
 // - where do we get the scenes from?
 // - polish interface
+// - localize english/german
 
 // TODO2:
 // - check if lamps are on/off

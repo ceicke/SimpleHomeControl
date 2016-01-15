@@ -17,19 +17,48 @@ class ActorsController: UITableViewController, NSFetchedResultsControllerDelegat
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var managedContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
     
+//    let refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         managedContext = appDelegate.managedObjectContext
         loxone.managedContext = appDelegate.managedObjectContext
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
-        let refreshControl = UIRefreshControl()
+        refreshOrOpenSettings()
+        populateTableData()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "refreshOrOpenSettings", name: UIApplicationWillEnterForegroundNotification, object: nil)
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: nil, object: nil)
+    }
+    
+    func refreshOrOpenSettings() {
         if(loxone.settingsEntered()) {
-            refreshControl.addTarget(self, action: Selector("loadData"), forControlEvents: UIControlEvents.ValueChanged)
+            refreshControl!.addTarget(self, action: Selector("loadData"), forControlEvents: UIControlEvents.ValueChanged)
         } else {
-            refreshControl.addTarget(self, action: Selector("enterData"), forControlEvents: UIControlEvents.ValueChanged)
+            refreshControl!.addTarget(self, action: Selector("enterData"), forControlEvents: UIControlEvents.ValueChanged)
         }
         self.refreshControl = refreshControl
     }
     
+    func populateTableData() {
+        let fetchRequest = NSFetchRequest(entityName: "Actor")
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "room_uuid", ascending: true), NSSortDescriptor(key: "name", ascending: true)]
+        
+        do {
+            let results = try managedContext.executeFetchRequest(fetchRequest)
+            actors = results as! [NSManagedObject]
+        } catch let error as NSError {
+            NSLog("Could not fetch \(error), \(error.userInfo)")
+        }
+        self.tableView.reloadData()
+    }
+
     func enterData() {
         UIApplication.sharedApplication().openURL(NSURL(string:UIApplicationOpenSettingsURLString)!)
         refreshControl!.endRefreshing()
@@ -40,8 +69,9 @@ class ActorsController: UITableViewController, NSFetchedResultsControllerDelegat
             if (isDone) {
                 self.loxone.getControls { (isDone) -> Void in
                     if (isDone) {
-                        self.tableView.reloadData()
+                        print("all done, reloading table data")
                         self.refreshControl!.endRefreshing()
+                        self.populateTableData()
                     } else {
                         self.refreshControl!.endRefreshing()
                         print("error")
@@ -62,22 +92,6 @@ class ActorsController: UITableViewController, NSFetchedResultsControllerDelegat
                 
             }
         }
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        let fetchRequest = NSFetchRequest(entityName: "Actor")
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "room_uuid", ascending: true), NSSortDescriptor(key: "name", ascending: true)]
-        
-        do {
-            let results =
-            try managedContext.executeFetchRequest(fetchRequest)
-            actors = results as! [NSManagedObject]
-        } catch let error as NSError {
-            NSLog("Could not fetch \(error), \(error.userInfo)")
-        }
-        self.tableView.reloadData()
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
