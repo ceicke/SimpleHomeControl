@@ -45,7 +45,7 @@ class EditActorController: UIViewController, UIPickerViewDataSource, UIPickerVie
             sceneInputField.text = scene
         }
         if let isDimmable = actor!.isDimmable {
-            dimmableSwitch.enabled = Bool(isDimmable)
+            dimmableSwitch.on = Bool(isDimmable)
         }
         if let roomUuid = actor!.room_uuid {
             selectedRoomUuid = roomUuid

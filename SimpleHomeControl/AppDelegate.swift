@@ -6,14 +6,19 @@
 //  Copyright © 2016 Christoph Eicke. All rights reserved.
 //
 
-// TODO1:
-// - adding new actors
+// TODO-1.0:
 // - where do we get the scenes from?
-// - polish interface
 // - localize english/german
+// - refresh always goes to settings
+// - launch screen with image
+// - polish interface
 
-// TODO2:
+// TODO-1.1:
+// - adding new actors
 // - check if lamps are on/off
+// - count how often things are touched
+// - force touch to turn on/off favorites
+
 
 import UIKit
 import CoreData
