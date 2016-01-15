@@ -175,7 +175,13 @@
                             <constraint firstItem="gaM-D1-kQu" firstAttribute="trailing" secondItem="iTd-wk-doV" secondAttribute="trailing" id="ydz-hM-M3f"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="K3N-ax-fF6"/>
+                    <navigationItem key="navigationItem" id="K3N-ax-fF6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="YeV-CC-Ejy">
+                            <connections>
+                                <segue destination="ocr-ts-bAm" kind="push" identifier="editActor" id="58S-yc-0CC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dimmerSlider" destination="Ksl-nv-R9q" id="UhC-GD-6K3"/>
                         <outlet property="favoriteSwitch" destination="lnP-NW-FdN" id="TW3-O5-ygz"/>
@@ -188,6 +194,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iUa-Ub-0u5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1247" y="347"/>
+        </scene>
+        <!--Edit Actor Controller-->
+        <scene sceneID="6BX-ki-jte">
+            <objects>
+                <viewController id="ocr-ts-bAm" customClass="EditActorController" customModule="SimpleHomeControl" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PoY-CK-REJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Beo-47-JoN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8z6-Yc-CdL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bNd-bp-jtW">
+                                <rect key="frame" x="20" y="72" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e0c-oM-G6V">
+                                <rect key="frame" x="0.0" y="110" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8z6-Yc-CdL" id="bCH-iC-xRK"/>
+                                    <outlet property="delegate" destination="8z6-Yc-CdL" id="LAP-2K-KHQ"/>
+                                </connections>
+                            </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UUID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="THg-9q-Lpl">
+                                <rect key="frame" x="20" y="334" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Scene" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="204-YF-6oP">
+                                <rect key="frame" x="20" y="372" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dimmable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Anh-Zu-xia">
+                                <rect key="frame" x="51" y="415" width="77" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k2W-Pc-wF6">
+                                <rect key="frame" x="136" y="410" width="51" height="31"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UPb-H4-oWw"/>
+                    <connections>
+                        <outlet property="dimmableSwitch" destination="k2W-Pc-wF6" id="zMW-sd-xmV"/>
+                        <outlet property="nameInputField" destination="bNd-bp-jtW" id="iyb-fC-DNN"/>
+                        <outlet property="roomPicker" destination="e0c-oM-G6V" id="tYs-VB-aQH"/>
+                        <outlet property="sceneInputField" destination="204-YF-6oP" id="mX5-Iu-tkw"/>
+                        <outlet property="uuidInputField" destination="THg-9q-Lpl" id="uCI-YK-WdH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dr8-pN-fox" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1719" y="347"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="paB-9b-vqf">

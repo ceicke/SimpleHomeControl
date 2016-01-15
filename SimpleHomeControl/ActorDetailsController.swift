@@ -52,6 +52,11 @@ class ActorDetailsController: UIViewController {
         self.configureView()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.configureView()
+    }
+    
     func configureView() {
         loxone.managedContext = self.managedObjectContext!
         if let name = actor!.name {
@@ -73,9 +78,11 @@ class ActorDetailsController: UIViewController {
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "editActor" {
+            (segue.destinationViewController as! EditActorController).actor = actor
+            (segue.destinationViewController as! EditActorController).managedObjectContext = managedObjectContext
+        }
     }
     
     

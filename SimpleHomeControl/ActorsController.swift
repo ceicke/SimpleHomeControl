@@ -78,7 +78,6 @@ class ActorsController: UITableViewController, NSFetchedResultsControllerDelegat
             if (isDone) {
                 self.loxone.getControls { (isDone) -> Void in
                     if (isDone) {
-                        print("all done, reloading table data")
                         self.refreshControl!.endRefreshing()
                         self.populateTableData()
                     } else {

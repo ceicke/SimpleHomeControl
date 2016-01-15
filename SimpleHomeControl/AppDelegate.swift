@@ -7,7 +7,6 @@
 //
 
 // TODO1:
-// - edit window for existing actors
 // - adding new actors
 // - where do we get the scenes from?
 // - polish interface

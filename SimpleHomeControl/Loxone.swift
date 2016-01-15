@@ -77,9 +77,9 @@ class Loxone {
         let username:NSString = NSUserDefaults.standardUserDefaults().valueForKey("username") as! NSString
         let password:NSString = NSUserDefaults.standardUserDefaults().valueForKey("password") as! NSString
         
-        var configEndpoint = "http://\(username):\(password)@\(loxoneLocalIP)/data/loxapp3.json"
+        let configEndpoint = "http://\(username):\(password)@\(loxoneLocalIP)/data/loxapp3.json"
 
-        configEndpoint = "http://81.169.247.199/data/loxapp3.json"
+        // configEndpoint = "http://81.169.247.199/data/loxapp3.json"
         
         Alamofire.request(.GET, configEndpoint)
             .responseJSON { response in
@@ -121,9 +121,9 @@ class Loxone {
         let username:NSString = NSUserDefaults.standardUserDefaults().valueForKey("username") as! NSString
         let password:NSString = NSUserDefaults.standardUserDefaults().valueForKey("password") as! NSString
         
-        var configEndpoint = "http://\(username):\(password)@\(loxoneLocalIP)/data/loxapp3.json"
+        let configEndpoint = "http://\(username):\(password)@\(loxoneLocalIP)/data/loxapp3.json"
         
-        configEndpoint = "http://81.169.247.199/data/loxapp3.json"
+        // configEndpoint = "http://81.169.247.199/data/loxapp3.json"
         
         Alamofire.request(.GET, configEndpoint)
             .responseJSON { response in

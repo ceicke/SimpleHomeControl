@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5DCE556B45B8226DB3A64018 /* Pods_SimpleHomeControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B55101F53DE46755B8B29C7 /* Pods_SimpleHomeControl.framework */; };
 		A211A7161C46A7D500398B8E /* Loxone.swift in Sources */ = {isa = PBXBuildFile; fileRef = A211A7151C46A7D500398B8E /* Loxone.swift */; };
+		A2431C1F1C48F0F6006E84FF /* EditActorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2431C1E1C48F0F6006E84FF /* EditActorController.swift */; };
 		A290D1181C47A2E4007340C1 /* Rooms+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A290D1161C47A2E4007340C1 /* Rooms+CoreDataProperties.swift */; };
 		A290D1191C47A2E4007340C1 /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = A290D1171C47A2E4007340C1 /* Rooms.swift */; };
 		A290D11C1C47B630007340C1 /* Actor+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A290D11A1C47B630007340C1 /* Actor+CoreDataProperties.swift */; };
@@ -49,6 +50,7 @@
 		0C56A5AC0C721A5061669CA1 /* Pods-SimpleHomeControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleHomeControl.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleHomeControl/Pods-SimpleHomeControl.release.xcconfig"; sourceTree = "<group>"; };
 		3B55101F53DE46755B8B29C7 /* Pods_SimpleHomeControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleHomeControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A211A7151C46A7D500398B8E /* Loxone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loxone.swift; sourceTree = "<group>"; };
+		A2431C1E1C48F0F6006E84FF /* EditActorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditActorController.swift; sourceTree = "<group>"; };
 		A290D1161C47A2E4007340C1 /* Rooms+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Rooms+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A290D1171C47A2E4007340C1 /* Rooms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
 		A290D11A1C47B630007340C1 /* Actor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Actor+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				A2BEAC2E1C45168D00ACF8FF /* ActorCell.swift */,
 				A2BEAC301C453CD300ACF8FF /* ActorDetailsController.swift */,
 				A2BEAC321C454D9600ACF8FF /* ControlCellController.swift */,
+				A2431C1E1C48F0F6006E84FF /* EditActorController.swift */,
 			);
 			path = SimpleHomeControl;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				A2BEAC311C453CD300ACF8FF /* ActorDetailsController.swift in Sources */,
 				A2BEAC2F1C45168D00ACF8FF /* ActorCell.swift in Sources */,
 				A290D11D1C47B630007340C1 /* Actor.swift in Sources */,
+				A2431C1F1C48F0F6006E84FF /* EditActorController.swift in Sources */,
 				A2BEAC331C454D9600ACF8FF /* ControlCellController.swift in Sources */,
 				A2BEAC291C44ED2100ACF8FF /* AppDelegate.swift in Sources */,
 				A290D11C1C47B630007340C1 /* Actor+CoreDataProperties.swift in Sources */,
