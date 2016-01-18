@@ -59,6 +59,7 @@ class Loxone {
         appDefaults["username"] = "2601"
         appDefaults["password"] = "2602"
         NSUserDefaults.standardUserDefaults().registerDefaults(appDefaults)
+        
         NSUserDefaults.standardUserDefaults().synchronize()
         
         let loxoneLocalIP:NSString = NSUserDefaults.standardUserDefaults().valueForKey("server_ip") as! NSString

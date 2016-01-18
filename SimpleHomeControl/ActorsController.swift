@@ -47,7 +47,8 @@ class ActorsController: UITableViewController, NSFetchedResultsControllerDelegat
     }
     
     func refreshOrOpenSettings() {
-        if(loxone.settingsEntered()) {
+        if(loxone.settingsEntered() || self.actors.count > 0) {
+            refreshControl!.removeTarget(self, action: Selector("enterData"), forControlEvents: UIControlEvents.ValueChanged)
             refreshControl!.addTarget(self, action: Selector("loadData"), forControlEvents: UIControlEvents.ValueChanged)
         } else {
             refreshControl!.addTarget(self, action: Selector("enterData"), forControlEvents: UIControlEvents.ValueChanged)

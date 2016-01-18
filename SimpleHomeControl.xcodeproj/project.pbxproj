@@ -52,6 +52,8 @@
 		A211A7151C46A7D500398B8E /* Loxone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loxone.swift; sourceTree = "<group>"; };
 		A2431C1E1C48F0F6006E84FF /* EditActorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditActorController.swift; sourceTree = "<group>"; };
 		A2431C201C492B17006E84FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2431C221C4937A5006E84FF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		A2431C231C4937A6006E84FF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A290D1161C47A2E4007340C1 /* Rooms+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Rooms+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A290D1171C47A2E4007340C1 /* Rooms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
 		A290D11A1C47B630007340C1 /* Actor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Actor+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				TargetAttributes = {
 					A2BEABEA1C44E3E500ACF8FF = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 3P69TXCM58;
 					};
 					A2BEAC001C44E3E500ACF8FF = {
 						CreatedOnToolsVersion = 7.2;
@@ -420,6 +423,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A2BEABF51C44E3E500ACF8FF /* Base */,
+				A2431C221C4937A5006E84FF /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -428,6 +432,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A2BEABFA1C44E3E500ACF8FF /* Base */,
+				A2431C231C4937A6006E84FF /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -521,6 +526,7 @@
 			baseConfigurationReference = CB59A78324BA2AF24FB71E87 /* Pods-SimpleHomeControl.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SimpleHomeControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.geisterstunde.SimpleHomeControl;
@@ -533,6 +539,7 @@
 			baseConfigurationReference = 0C56A5AC0C721A5061669CA1 /* Pods-SimpleHomeControl.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SimpleHomeControl/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.geisterstunde.SimpleHomeControl;

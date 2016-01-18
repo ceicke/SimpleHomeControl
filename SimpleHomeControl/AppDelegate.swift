@@ -11,7 +11,6 @@
 // - localize english/german
 // - refresh always goes to settings
 // - launch screen with image
-// - polish interface
 
 // TODO-1.1:
 // - adding new actors
