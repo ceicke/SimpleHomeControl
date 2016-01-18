@@ -125,7 +125,6 @@ class ActorsController: UITableViewController, NSFetchedResultsControllerDelegat
         return true
     }
     
-    // called when a row deletion action is confirmed
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
             switch editingStyle {
             case .Delete:

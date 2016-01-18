@@ -49,7 +49,3 @@
 
 /* Class = "UIButton"; normalTitle = "Off"; ObjectID = "vpj-eq-lWe"; */
 "vpj-eq-lWe.normalTitle" = "Off";
-
-"NO_ACTORS_FOUND" = "No actors found";
-
-"PLEASE_PULL_REFRESH" = "Please pull down to load the actors.";

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5DCE556B45B8226DB3A64018 /* Pods_SimpleHomeControl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B55101F53DE46755B8B29C7 /* Pods_SimpleHomeControl.framework */; };
 		A211A7161C46A7D500398B8E /* Loxone.swift in Sources */ = {isa = PBXBuildFile; fileRef = A211A7151C46A7D500398B8E /* Loxone.swift */; };
+		A22DEFB41C4D5F8300672901 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A22DEFB61C4D5F8300672901 /* Localizable.strings */; };
 		A2431C1F1C48F0F6006E84FF /* EditActorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2431C1E1C48F0F6006E84FF /* EditActorController.swift */; };
 		A2431C211C492B17006E84FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2431C201C492B17006E84FF /* Assets.xcassets */; };
 		A290D1181C47A2E4007340C1 /* Rooms+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A290D1161C47A2E4007340C1 /* Rooms+CoreDataProperties.swift */; };
@@ -51,6 +52,9 @@
 		3B55101F53DE46755B8B29C7 /* Pods_SimpleHomeControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleHomeControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A211A7151C46A7D500398B8E /* Loxone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loxone.swift; sourceTree = "<group>"; };
 		A22DEFB11C4D4FCF00672901 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		A22DEFB51C4D5F8300672901 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A22DEFB71C4D5F8500672901 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A22DEFB81C4D5F8700672901 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A2431C1E1C48F0F6006E84FF /* EditActorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditActorController.swift; sourceTree = "<group>"; };
 		A2431C201C492B17006E84FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2431C221C4937A5006E84FF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 				A2BEAC301C453CD300ACF8FF /* ActorDetailsController.swift */,
 				A2BEAC321C454D9600ACF8FF /* ControlCellController.swift */,
 				A2431C1E1C48F0F6006E84FF /* EditActorController.swift */,
+				A22DEFB61C4D5F8300672901 /* Localizable.strings */,
 			);
 			path = SimpleHomeControl;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = A2BEABE21C44E3E500ACF8FF;
 			productRefGroup = A2BEABEC1C44E3E500ACF8FF /* Products */;
@@ -295,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A22DEFB41C4D5F8300672901 /* Localizable.strings in Resources */,
 				A2BEAC2B1C44ED6C00ACF8FF /* Settings.bundle in Resources */,
 				A2BEABFB1C44E3E500ACF8FF /* LaunchScreen.storyboard in Resources */,
 				A2431C211C492B17006E84FF /* Assets.xcassets in Resources */,
@@ -419,6 +426,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		A22DEFB61C4D5F8300672901 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A22DEFB51C4D5F8300672901 /* Base */,
+				A22DEFB71C4D5F8500672901 /* en */,
+				A22DEFB81C4D5F8700672901 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		A2BEABF41C44E3E500ACF8FF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

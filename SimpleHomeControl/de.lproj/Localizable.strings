@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  SimpleHomeControl
+
+  Created by Christoph Eicke on 18.01.16.
+  Copyright © 2016 Christoph Eicke. All rights reserved.
+*/
+
+NO_ACTORS_FOUND = "Keine Aktoren geladen";
+PLEASE_PULL_REFRESH = "Bitte ziehe die Liste zum laden der Aktoren herunter.";
