@@ -9,7 +9,6 @@
 // TODO-1.0:
 // - where do we get the scenes from?
 // - localize english/german
-// - refresh always goes to settings
 // - launch screen with image
 
 // TODO-1.1:
