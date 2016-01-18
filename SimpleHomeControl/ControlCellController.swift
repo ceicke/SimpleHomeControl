@@ -24,11 +24,13 @@ class ControlCellController: UICollectionViewCell {
     @IBAction func offPressed(sender: AnyObject) {
         loxone.tellLoxone(actor!.name!, uuid: actor!.uuid!, onOff: "off", scene: "")
         dimmerSlider.value = 0
+        actor?.used()
     }
     
     @IBAction func onPressed(sender: AnyObject) {
         loxone.tellLoxone(actor!.name!, uuid: actor!.uuid!, onOff: "on", scene: "")
         dimmerSlider.value = 100
+        actor?.used()
     }
     
     @IBAction func dimmValueChanged(dimmer: UISlider) {

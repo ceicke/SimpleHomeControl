@@ -20,5 +20,6 @@ extension Actor {
     @NSManaged var room_uuid: String?
     @NSManaged var scene: String?
     @NSManaged var uuid: String?
+    @NSManaged var useCount: NSNumber?
 
 }

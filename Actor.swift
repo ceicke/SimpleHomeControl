@@ -12,6 +12,18 @@ import CoreData
 
 class Actor: NSManagedObject {
 
-// Insert code here to add functionality to your managed object subclass
+    func used() {
+        self.useCount = Int(self.useCount!) + 1
+        save()
+    }
+    
+    func save() {
+        do {
+            try self.managedObjectContext!.save()
+        }
+        catch let error as NSError {
+            NSLog("Error saving: %@", error)
+        }
+    }
 
 }

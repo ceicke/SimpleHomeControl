@@ -9,13 +9,12 @@
 // TODO-1.0:
 // - where do we get the scenes from?
 // - localize english/german
-// - launch screen with image
 
 // TODO-1.1:
 // - adding new actors
 // - check if lamps are on/off
-// - count how often things are touched
 // - force touch to turn on/off favorites
+// - refactor creation of rooms and actors into class
 
 
 import UIKit

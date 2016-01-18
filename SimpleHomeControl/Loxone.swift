@@ -171,6 +171,7 @@ class Loxone {
             actor.setValue(name, forKey: "name")
             actor.setValue(room_uuid, forKey: "room_uuid")
             actor.setValue(0, forKey: "isFavorite")
+            actor.setValue(0, forKey: "useCount")
             if dimmable {
                 actor.setValue(1, forKey: "isDimmable")
             } else {

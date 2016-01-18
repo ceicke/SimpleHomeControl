@@ -26,17 +26,20 @@ class ActorDetailsController: UIViewController {
     @IBAction func offPressed(sender: AnyObject) {
         loxone.tellLoxone(actor!.name!, uuid: actor!.uuid!, onOff: "off", scene: "")
         dimmerSlider.value = 0
+        actor?.used()
     }
     
     @IBAction func onPressed(sender: AnyObject) {
         loxone.tellLoxone(actor!.name!, uuid: actor!.uuid!, onOff: "on", scene: "")
         dimmerSlider.value = 100
+        actor?.used()
     }
     
     @IBAction func dimmerValueChanged(dimmer: UISlider) {
         loxone.tellLoxone(actor!.name!, uuid: actor!.uuid!, onOff: "on", scene: "", dimmValue: Int(dimmer.value))
     }
     
+    // TODO: refactor into model
     @IBAction func isFavoriteChanged(sender: UISwitch) {
         actor?.setValue(sender.on, forKey: "isFavorite")
         

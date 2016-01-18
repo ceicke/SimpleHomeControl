@@ -6,6 +6,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="room_uuid" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="scene" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="useCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Rooms" representedClassName=".Rooms" syncable="YES">
@@ -13,7 +14,7 @@
         <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Actor" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="Actor" positionX="-63" positionY="-18" width="128" height="150"/>
         <element name="Rooms" positionX="-342" positionY="-0" width="128" height="75"/>
     </elements>
 </model>
