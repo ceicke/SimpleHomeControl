@@ -9,6 +9,7 @@
 // TODO-1.0:
 // - where do we get the scenes from?
 // - localize english/german
+// - text which explains the app
 
 // TODO-1.1:
 // - adding new actors

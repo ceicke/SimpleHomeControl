@@ -37,6 +37,10 @@ class ControlCellController: UICollectionViewCell {
         loxone.tellLoxone(actor!.name!, uuid: actor!.uuid!, onOff: "on", scene: "", dimmValue: Int(dimmer.value))
     }
     
+    @IBAction func doneSettingDimmerValue(dimmer: UISlider) {
+        actor?.used()
+    }
+    
     func configureView(managedContext: NSManagedObjectContext) {
         loxone.managedContext = managedContext
         if let name = actor!.name {

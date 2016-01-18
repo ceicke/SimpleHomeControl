@@ -39,6 +39,10 @@ class ActorDetailsController: UIViewController {
         loxone.tellLoxone(actor!.name!, uuid: actor!.uuid!, onOff: "on", scene: "", dimmValue: Int(dimmer.value))
     }
     
+    @IBAction func doneSettingDimmerValue(dimmer: UISlider) {
+        actor?.used()
+    }
+    
     // TODO: refactor into model
     @IBAction func isFavoriteChanged(sender: UISwitch) {
         actor?.setValue(sender.on, forKey: "isFavorite")
