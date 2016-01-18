@@ -50,10 +50,10 @@
 		0C56A5AC0C721A5061669CA1 /* Pods-SimpleHomeControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleHomeControl.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleHomeControl/Pods-SimpleHomeControl.release.xcconfig"; sourceTree = "<group>"; };
 		3B55101F53DE46755B8B29C7 /* Pods_SimpleHomeControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleHomeControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A211A7151C46A7D500398B8E /* Loxone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loxone.swift; sourceTree = "<group>"; };
+		A22DEFB11C4D4FCF00672901 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		A2431C1E1C48F0F6006E84FF /* EditActorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditActorController.swift; sourceTree = "<group>"; };
 		A2431C201C492B17006E84FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2431C221C4937A5006E84FF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
-		A2431C231C4937A6006E84FF /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A290D1161C47A2E4007340C1 /* Rooms+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Rooms+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A290D1171C47A2E4007340C1 /* Rooms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
 		A290D11A1C47B630007340C1 /* Actor+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Actor+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -424,6 +424,7 @@
 			children = (
 				A2BEABF51C44E3E500ACF8FF /* Base */,
 				A2431C221C4937A5006E84FF /* de */,
+				A22DEFB11C4D4FCF00672901 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -432,7 +433,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				A2BEABFA1C44E3E500ACF8FF /* Base */,
-				A2431C231C4937A6006E84FF /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

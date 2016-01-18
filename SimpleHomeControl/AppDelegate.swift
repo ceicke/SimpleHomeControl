@@ -7,11 +7,10 @@
 //
 
 // TODO-1.0:
-// - where do we get the scenes from?
 // - localize english/german
-// - text which explains the app
 
 // TODO-1.1:
+// - where do we get the scenes from?
 // - adding new actors
 // - check if lamps are on/off
 // - force touch to turn on/off favorites

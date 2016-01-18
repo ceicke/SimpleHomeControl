@@ -12,6 +12,7 @@ import CoreData
 class FavoritesController: UICollectionViewController, NSFetchedResultsControllerDelegate {
     
     var actors = [NSManagedObject]()
+    let loxone = Loxone()
     
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var managedContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
@@ -22,6 +23,7 @@ class FavoritesController: UICollectionViewController, NSFetchedResultsControlle
         managedContext = appDelegate.managedObjectContext
         
         self.configureView()
+        self.checkForSettings()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -48,6 +50,12 @@ class FavoritesController: UICollectionViewController, NSFetchedResultsControlle
             NSLog("Could not fetch \(error), \(error.userInfo)")
         }
         self.collectionView?.reloadData()
+    }
+    
+    func checkForSettings() {
+        if !loxone.settingsEntered() {
+            UIApplication.sharedApplication().openURL(NSURL(string:UIApplicationOpenSettingsURLString)!)
+        }
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

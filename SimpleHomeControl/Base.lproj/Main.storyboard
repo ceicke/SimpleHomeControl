@@ -267,7 +267,7 @@
                     <collectionView key="view" autoresizesSubviews="NO" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" dataMode="prototypes" id="SPy-1z-FAA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Gsj-8h-Gc3">
                             <size key="itemSize" width="324" height="64"/>
                             <size key="headerReferenceSize" width="50" height="50"/>
@@ -328,7 +328,7 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.16147629310344827" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.99194461107254028" green="0.99615627527236938" blue="0.99600595235824585" alpha="0.65051185344827589" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="actorNameLabel" destination="ekC-oL-Nwq" id="uXG-Lf-aWm"/>
                                     <outlet property="dimmerSlider" destination="nuJ-1L-9HH" id="R1e-Gc-1DT"/>

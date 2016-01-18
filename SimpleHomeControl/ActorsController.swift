@@ -67,6 +67,12 @@ class ActorsController: UITableViewController, NSFetchedResultsControllerDelegat
             NSLog("Could not fetch \(error), \(error.userInfo)")
         }
         self.tableView.reloadData()
+        
+        if actors.count == 0 {
+            let alert = UIAlertController(title: NSLocalizedString("NO_ACTORS_FOUND", comment: "No actors found"), message: NSLocalizedString("PLEASE_PULL_REFRESH", comment: "Please pull the list down to refresh the actors."), preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
     }
 
     func enterData() {

@@ -1,55 +1,55 @@
 
 /* Class = "UITextField"; placeholder = "Scene"; ObjectID = "204-YF-6oP"; */
-"204-YF-6oP.placeholder" = "Szene";
+"204-YF-6oP.placeholder" = "Scene";
 
 /* Class = "UINavigationItem"; title = "Actors"; ObjectID = "5kU-EI-E6k"; */
-"5kU-EI-E6k.title" = "Aktoren";
+"5kU-EI-E6k.title" = "Actors";
 
 /* Class = "UIButton"; normalTitle = "On"; ObjectID = "6TB-fe-UoW"; */
-"6TB-fe-UoW.normalTitle" = "An";
+"6TB-fe-UoW.normalTitle" = "On";
 
 /* Class = "UILabel"; text = "Show in Favorites"; ObjectID = "8ZL-ym-7I5"; */
-"8ZL-ym-7I5.text" = "In Favoriten anzeigen";
+"8ZL-ym-7I5.text" = "Show in Favorites";
 
 /* Class = "UILabel"; text = "Dimmable"; ObjectID = "Anh-Zu-xia"; */
-"Anh-Zu-xia.text" = "Dimmbar";
+"Anh-Zu-xia.text" = "Dimmable";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "JvF-Ip-MTU"; */
 "JvF-Ip-MTU.text" = "Label";
 
 /* Class = "UIButton"; normalTitle = "Off"; ObjectID = "Nsz-gH-uZM"; */
-"Nsz-gH-uZM.normalTitle" = "Aus";
+"Nsz-gH-uZM.normalTitle" = "Off";
 
 /* Class = "UITextField"; placeholder = "UUID"; ObjectID = "THg-9q-Lpl"; */
 "THg-9q-Lpl.placeholder" = "UUID";
 
 /* Class = "UITableViewController"; title = "Actors"; ObjectID = "TOi-Nc-aA1"; */
-"TOi-Nc-aA1.title" = "Aktoren";
+"TOi-Nc-aA1.title" = "Actors";
 
 /* Class = "UITextField"; placeholder = "Name"; ObjectID = "bNd-bp-jtW"; */
 "bNd-bp-jtW.placeholder" = "Name";
 
 /* Class = "UILabel"; text = "ActorName"; ObjectID = "ekC-oL-Nwq"; */
-"ekC-oL-Nwq.text" = "Aktor Name";
+"ekC-oL-Nwq.text" = "ActorName";
 
 /* Class = "UILabel"; text = "Name"; ObjectID = "gaM-D1-kQu"; */
 "gaM-D1-kQu.text" = "Name";
 
 /* Class = "UILabel"; text = "RoomLabel"; ObjectID = "iQ2-xh-MBU"; */
-"iQ2-xh-MBU.text" = "Raum";
+"iQ2-xh-MBU.text" = "RoomLabel";
 
 /* Class = "UIButton"; normalTitle = "On"; ObjectID = "iTd-wk-doV"; */
-"iTd-wk-doV.normalTitle" = "An";
+"iTd-wk-doV.normalTitle" = "On";
 
 /* Class = "UILabel"; text = "ActorName"; ObjectID = "mEC-Eh-lP2"; */
-"mEC-Eh-lP2.text" = "Aktor Name";
+"mEC-Eh-lP2.text" = "ActorName";
 
 /* Class = "UILabel"; text = "Room"; ObjectID = "nBN-QX-4Ev"; */
-"nBN-QX-4Ev.text" = "Raum";
+"nBN-QX-4Ev.text" = "Room";
 
 /* Class = "UIButton"; normalTitle = "Off"; ObjectID = "vpj-eq-lWe"; */
-"vpj-eq-lWe.normalTitle" = "Aus";
+"vpj-eq-lWe.normalTitle" = "Off";
 
-"NO_ACTORS_FOUND" = "Keine Aktoren geladen";
+"NO_ACTORS_FOUND" = "No actors found";
 
-"PLEASE_PULL_REFRESH" = "Bitte ziehe die Liste zum laden der Aktoren herunter."
+"PLEASE_PULL_REFRESH" = "Please pull down to load the actors."
