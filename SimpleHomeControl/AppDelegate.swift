@@ -6,15 +6,15 @@
 //  Copyright © 2016 Christoph Eicke. All rights reserved.
 //
 
-// TODO-1.0:
-// - localize english/german
-
 // TODO-1.1:
+// - check for timeout of refreshing and show message
+// - check if miniserver is available with username/password/ip combination
 // - where do we get the scenes from?
 // - adding new actors
 // - check if lamps are on/off
 // - force touch to turn on/off favorites
 // - refactor creation of rooms and actors into class
+// - move show in favorites to edit view
 
 
 import UIKit

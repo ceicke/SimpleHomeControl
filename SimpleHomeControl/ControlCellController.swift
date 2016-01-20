@@ -57,6 +57,8 @@ class ControlCellController: UICollectionViewCell {
                 offButton.hidden = true
             }
         }
+        onButton.layer.cornerRadius = 5
+        offButton.layer.cornerRadius = 5
     }
     
     

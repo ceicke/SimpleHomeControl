@@ -17,7 +17,6 @@ class ActorsController: UITableViewController, NSFetchedResultsControllerDelegat
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     var managedContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
 
-    
     @IBOutlet weak var editActorButton: UIBarButtonItem!
 
     @IBAction func editPressed(sender: AnyObject) {
@@ -116,7 +115,7 @@ class ActorsController: UITableViewController, NSFetchedResultsControllerDelegat
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! ActorCell
         let actor = actors[indexPath.row]
-        cell.configure(actor.valueForKey("name")!.description, room: loxone.getRoomByUuid(actor.valueForKey("room_uuid")!.description))
+        cell.configure(actor as? Actor, room: loxone.getRoomByUuid(actor.valueForKey("room_uuid")!.description))
         
         return cell
     }

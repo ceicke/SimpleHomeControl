@@ -17,6 +17,16 @@ class Actor: NSManagedObject {
         save()
     }
     
+    func toggleFavorite() {
+        print("toggle favorite")
+        if (self.isFavorite == true) {
+            self.isFavorite = false
+        } else {
+            self.isFavorite = true
+        }
+        save()
+    }
+    
     func save() {
         do {
             try self.managedObjectContext!.save()
