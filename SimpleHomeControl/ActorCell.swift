@@ -36,7 +36,6 @@ class ActorCell: UITableViewCell {
             }
         } else {
             if let image = UIImage(named: "favorite-off") {
-                print("off")
                 favoriteButton.setBackgroundImage(image, forState: .Normal)
             }
         }
